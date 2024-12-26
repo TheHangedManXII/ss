@@ -1,18 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>广西职称信息查询</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link href="https://zscx.rczx.com/Content/common.css?v=20231206" rel="stylesheet" />
     <style>
-        /* 设置图片的最大宽度 */
-        .responsive-image {
-            width: 300;
-            height: auto; /* 保持图片的纵横比 */
+        a[title="站长统计"] {
+            position: absolute;
+            left: -999px;
         }
     </style>
-</head>
 <body>
-    <img src="20241227031210.jpg" alt="12s">
+    <div class="content">
+
+        <div style="background:#fff;text-align:center">
+            <img src="https://zscx.rczx.com/Content/imgs/login_logo2.png" style="max-width:100%" alt="">
+        </div>
+        <div id="banner-box" class="box-swipe">
+            <ul style="list-style: none; transition-duration: 500ms;">
+                
+            </ul>
+            <ol>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+        
+        <ul class="table-view">
+            <li>
+                <span class="pull-left">证书编号</span>
+                <span class="pull-right">
+                    15473537
+
+                    
+                </span>
+            </li>
+            <li>
+                <span class="pull-left">证书状态</span>
+                <span class="pull-right">
+正常                </span>
+            </li>
+            <li>
+                <span class="pull-left">姓名</span>
+                <span class="pull-right">龚倩玉</span>
+            </li>
+            <li>
+                <span class="pull-left">性别</span>
+                <span class="pull-right">女</span>
+            </li>
+            <li>
+                <span class="pull-left">身份证号（或证件号码后5位）</span>
+                <span class="pull-right">452701***0021</span>
+            </li>
+
+            <li>
+                <span class="pull-left">管理号</span>
+                <span class="pull-right">205010011201178759</span>
+            </li>
+            <li>
+                <span class="pull-left">职称系列</span>
+                <span class="pull-right">工程技术人员</span>
+            </li>
+            <li>
+                <span class="pull-left">职称级别</span>
+                <span class="pull-right">副高级</span>
+            </li>
+            <li>
+                <span class="pull-left">资格名称</span>
+                <span class="pull-right">高级工程师</span>
+            </li>
+            <li>
+                <span class="pull-left">专业</span>
+                <span class="pull-right">工业与民用建筑</span>
+            </li>
+            <li>
+                <span class="pull-left">批准机关</span>
+                <span class="pull-right">广西壮族自治区人力资源和社会保障厅</span>
+            </li>
+            <li>
+                <span class="pull-left">授予时间</span>
+                <span class="pull-right">2018-12</span>
+            </li>
+            <li>
+                <span class="pull-left">办证时间</span>
+                <span class="pull-right">2019-02</span>
+            </li>
+
+            <li>
+                <span class="pull-left">授予单位电话</span>
+                <span class="pull-right">
+0771-5866234                </span>
+            </li>
+            <li style="border:none;">
+                <span class="pull-left">备注</span>
+                <div class="tip">
+                    
+                </div>
+            </li>
+            <li style="border:none;">
+                <div class="tip">
+                    注意：请确认本页面的链接是以“http://zscx.rczx.com”开头。用微信扫描时，点击右上角“<span class="iconfont icon-caidanshu" style="font-size:14px;"></span>”菜单中的“在浏览器中打开”，即可在浏览器地址栏中核对域名。
+                </div>
+            </li>
+        </ul>
+        <div class="footer" style="font-size:12px;">
+            主办：广西壮族自治区职称改革工作领导小组办公室 <br>
+            技术支持：广西智汇通人力资源有限公司
+        </div>
+    </div>
+    
+    <script src="/Content/js/jquery-1.8.3.min.js"></script>
+    <script src="/Content/js/swipe.min.js"></script>
+    <script>
+          //swipe
+          $(function(){
+            new Swipe(document.getElementById('banner-box'), {
+                speed:500,
+                auto:3000,
+                callback: function(){
+                    var lis = $(this.element).next("ol").children();
+                    lis.removeClass("on").eq(this.index).addClass("on");
+                }
+            });
+        });
+
+        $('#btn-banner').click(function () {
+            //window.location = '';
+            var url = "/ClientMag/ShowCertificateOline?Name=" + "吴长彬" + "&BookNumber=" + "1415442";
+            console.log(url);
+            window.location = url;
+        });
+    </script>
+    
+    <script>
+        var _czc = _czc || [];
+        (function () {
+            var um = document.createElement("script");
+            um.src = "https://s9.cnzz.com/z.js?id=1280721568&async=1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(um, s);
+        })();
+    </script>
+
 </body>
+
 </html>
